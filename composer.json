@@ -14,6 +14,40 @@
         "magento-hackathon/magento-composer-installer":"*"
     },
     "require-dev":{
-        "ivanchepurnyi/ecomdev_phpunit":"*"
+        "aydin-hassan/magento-core-composer-installer": "~1.0",
+        "magento/magento": "1.8.1.0",
+        "eloquent/asplode": "*",
+        "psr/log": "*",
+        "symfony/event-dispatcher": "*",
+        "symfony/process": "*",
+        "colinmollenhour/modman": "*",
+        "theseer/autoload": "~1.14"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:AydinHassan/magento-community.git"
+        },
+        {
+            "type": "composer",
+            "url": "http://packages.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        }
+    ],
+    "extra": {
+        "magento-root-dir": "store",
+        "auto-append-gitignore": true,
+        "map": [
+            ["app/code/community/Netzarbeiter/GroupsCatalog2", "app/code/community/Netzarbeiter/GroupsCatalog2"],
+            ["app/etc/modules/Netzarbeiter_GroupsCatalog2.xml", "app/etc/modules/Netzarbeiter_GroupsCatalog2.xml"],
+            ["app/design/adminhtml/default/default/layout/netzarbeiter/groupscatalog2.xml", "app/design/adminhtml/default/default/layout/netzarbeiter/groupscatalog2.xml"],
+            ["app/design/adminhtml/default/default/template/netzarbeiter/groupscatalog2/system/tools/migration.phtml", "app/design/adminhtml/default/default/template/netzarbeiter/groupscatalog2/system/tools/migration.phtml"],
+            ["app/locale/de_DE/Netzarbeiter_GroupsCatalog2.csv", "app/locale/de_DE/Netzarbeiter_GroupsCatalog2.csv"],
+            ["app/locale/it_IT/Netzarbeiter_GroupsCatalog2.csv", "app/locale/it_IT/Netzarbeiter_GroupsCatalog2.csv"],
+            ["app/locale/nl_NL/Netzarbeiter_GroupsCatalog2.csv", "app/locale/nl_NL/Netzarbeiter_GroupsCatalog2.csv"]
+        ]
     }
 }
